@@ -1,0 +1,170 @@
+/* membuat padding 0 dan margin 0 untuk
+semua elemen serta memberi ukuran box dan 
+jenis huruf 'orbitron' dari google fonts */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* membuat posisi konten body ke bagian tengah
+dan item dalam body di posisi tengah. dengan 
+min height 100vh dan background color ungu*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #3a0ca3;
+}
+
+/* membuat animasi gradien warna
+pada background dengan beberapa kombinasi warna
+dan animasi ease infinite*/
+body {
+    background: linear-gradient(-45deg, #4361ee, #e73c7e, #480ca8, #3a0ca3);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* membuat desain untuk bagian judul class */
+.judul {
+    background-color: #10002b;
+    color: white;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+/* mengatur font size pada class 
+nama dan nim*/
+.nama {
+    font-size: 15px;
+}
+
+.nim {
+    font-size: 15px;
+}
+
+/* membuat desain kelas kalkulator dengan
+menambahkan box shadow dan ukurannya*/
+.kalkulator {
+    position: relative;
+    width: 340px;
+    padding: 20px;
+    box-shadow: 15px 15px 20px #10002b,
+        -5px -5px 5px #f61379;
+    background-color: #b5179e;
+}
+
+/* membuat desain dari elemen yang ada
+pada kelas tombol dan ada di kelas kalkulator */
+.kalkulator .tombol {
+    background-color: #b5179e;
+    position: relative;
+    display: grid;
+}
+
+/* membuat desain dari elemen yang ada
+pada kelas tombol dan ada di kelas kalkulator 
+dengan ID Nilai*/
+.kalkulator .tombol #Nilai {
+    position: relative;
+    grid-column: span 4;
+    user-select: none;
+    overflow: none;
+    width: 100%;
+    text-align: right;
+    color: #ffd500;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 15px #f61379;
+    margin-bottom: 12px;
+    padding: 0 20px;
+    font-size: 2em;
+    font-weight: 500;
+    background-color: #480ca8;
+}
+
+/* membuat desain dari elemen yang ada
+pada kelas tombol dan ada di kelas kalkulator, kelas tombol 
+dengan span*/
+.kalkulator .tombol span {
+    position: relative;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+        -5px -5px 20px #f61379;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #ffd500;
+    border: 2px solid #b5179e;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #f61379;
+}
+
+/* membuat desain dari elemen yang ada
+pada kelas tombol dan ada di kelas kalkulator ketika span aktif*/
+.kalkulator .tombol span:active {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 10px #f61379;
+    color: #f44336;
+}
+
+/* membuat desain dari elemen yang ada
+pada kelas tombol dan ada di kelas kalkulator dengan
+span(hapus,tambah,dan hasil)*/
+.kalkulator .tombol span#hapus {
+    grid-column: span 2;
+    background: #ffd500;
+    color: white;
+    border: 2px solid #b5179e;
+}
+
+.kalkulator .tombol span#tambah {
+    grid-row: span 2;
+    background: #ffd500;
+    color: white;
+    border: 2px solid #b5179e;
+}
+
+.kalkulator .tombol span#hasil {
+    grid-row: span 2;
+    background: #ffd500;
+    color: white;
+    border: 2px solid #b5179e;
+}
+
+/* membuat desain ketika elemen yang ada
+pada kelas tombol dan ada di kelas kalkulator dengan
+span(hapus,tambah,dan hasil) aktif */
+.kalkulator .tombol span#hapus:active,
+.kalkulator .tombol span#tambah:active,
+.kalkulator .tombol span#hasil:active {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+        -5px -5px 10px #fff,
+        inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
